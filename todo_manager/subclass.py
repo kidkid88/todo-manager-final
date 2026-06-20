@@ -19,3 +19,10 @@ class RecurringTask(Task):
         )
 
         self.repeat_cycle = repeat_cycle
+
+    def get_info(self):
+        info = super().get_info()
+
+        info["repeat_cycle"] = self.repeat_cycle
+
+        return info
